@@ -1,0 +1,39 @@
+[package]
+name = "swarm_factory"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+agent_models={git = "https://github.com/fcn06/swarm.git"}
+agent_core={git = "https://github.com/fcn06/swarm.git"}
+
+resource_invoker={git = "https://github.com/fcn06/swarm.git"}
+
+configuration={git = "https://github.com/fcn06/swarm.git"}
+agent_factory={git = "https://github.com/fcn06/swarm.git"}
+basic_agent={git = "https://github.com/fcn06/swarm.git"}
+planner_agent={git = "https://github.com/fcn06/swarm.git"}
+executor_agent={git = "https://github.com/fcn06/swarm.git"}
+workflow_management={git = "https://github.com/fcn06/swarm.git"}
+
+# To be modified if you want to point out to other implementation of Memory, Evaluation, Discovery Services
+agent_service_adapters={git = "https://github.com/fcn06/swarm.git"}
+
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+async-trait = { version = "0.1"}
+serde = { version = "1.0", features = ["derive","rc"] }
+serde_json = "1.0"
+anyhow = "1.0"
+
+clap = { version = "4.5", features = ["derive"] }
+
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter","fmt"] }
+toml = "0.9"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
