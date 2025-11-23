@@ -4,27 +4,27 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-agent_models={git = "https://github.com/fcn06/swarm.git"}
-agent_core={git = "https://github.com/fcn06/swarm.git"}
 
-resource_invoker={git = "https://github.com/fcn06/swarm.git"}
+agent_models={git = "https://github.com/fcn06/swarm_commons.git"}
+agent_core={git = "https://github.com/fcn06/swarm_commons.git"}
+configuration={git = "https://github.com/fcn06/swarm_commons.git"}
 
-configuration={git = "https://github.com/fcn06/swarm.git"}
+
 agent_factory={git = "https://github.com/fcn06/swarm.git"}
 basic_agent={git = "https://github.com/fcn06/swarm.git"}
 planner_agent={git = "https://github.com/fcn06/swarm.git"}
 executor_agent={git = "https://github.com/fcn06/swarm.git"}
 workflow_management={git = "https://github.com/fcn06/swarm.git"}
+resource_invoker={git = "https://github.com/fcn06/swarm.git"}
 
 
 # To be modified if you want to point out to other implementation of Memory, Evaluation, Discovery Services
-agent_discovery_service = {git = "https://github.com/fcn06/swarm.git"}
-agent_evaluation_service = {git = "https://github.com/fcn06/swarm.git"}
-agent_memory_service = {git = "https://github.com/fcn06/swarm.git"}
+agent_discovery_service = {git = "https://github.com/fcn06/swarm_services.git"}
+agent_evaluation_service = {git = "https://github.com/fcn06/swarm_services.git"}
+agent_memory_service = {git = "https://github.com/fcn06/swarm_services.git"}
+agent_service_adapters={git = "https://github.com/fcn06/swarm_services.git"}
 
 
-# To be modified if you want to point out to other implementation of Memory, Evaluation, Discovery Services
-agent_service_adapters={git = "https://github.com/fcn06/swarm.git"}
 
 tokio = { version = "1", features = ["full"] }
 futures = "0.3"
